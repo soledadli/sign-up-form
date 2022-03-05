@@ -1,4 +1,23 @@
-# Getting Started with Create React App
+# Sign Up Form SPA With ReactJS
+
+This repo contains the source code of the single-page application. You can find the [style guide](style-guide.md) and the final [design looks](https://github.com/soledadli/sign-up-form/tree/master/design) in the repo.  
+
+## Summary 
+The SPA needs to fulfill three states from the design perspective:
+1. active
+2. responsive (desktop & mobile phone)
+3. error 
+
+The SPA needs to fulfill the following functions:
+1. update users' inputs
+2. submit the form
+3. validate users' inputs (make sure the inputs are not empty)
+4. validate email address 
+
+The SPA has been tested its functionality with Jest. 
+
+---
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
