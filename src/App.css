@@ -1,0 +1,254 @@
+/* Style Guidelines */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: #fff;
+  --btn-shadow: rgba(0, 0, 0, 0.5);
+  --text-shadow: rgba(0, 0, 0, 0.2);
+
+  --fontSize: 16px;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+
+  --form-padding: 6% 6%;
+  --btn-height: 2.5rem;
+  --btn-opacity: 0.8;
+  --border-angle: 5px;
+}
+
+
+.App {
+  font-weight: var(--regular);
+  box-sizing: border-box;
+  background-image: url('images/bg-intro-desktop.png');
+  background-color: var(--red);
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Left Part: PageContent Section */
+
+#pagecontent-section {
+  margin: auto;
+  width: 80%;
+  padding: 5% 5% 5% 11%;
+  text-align: left;
+}
+
+/* PageContent Section - Text */
+.title-heading {
+  font-weight: var(--bold);
+  font-size: 300%;
+}
+
+.title-content-p {
+  padding-right: 5%;
+  line-height: 1.5;
+  font-weight: var(--semi-bold);
+}
+
+/* Right Part: Form Section */
+#form-section {
+  margin: auto;
+  width: 80%;
+  padding: 5% 10% 5% 0;
+}
+
+.registration-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  padding: var(--form-padding);
+  margin-top: 4%;
+  border-radius: var(--border-angle);
+  box-shadow: 0px 8px 8px var(--btn-shadow);
+  color: var(--red);
+  max-width: 100%;
+}
+
+/* Form Section - Text */
+span {
+  font-weight: var(--semi-bold);
+}
+
+.error-msg {
+  padding-top: 1%;
+  text-align: right;
+  font-style: italic;
+  font-size: 80%;
+}
+
+.terms-and-services {
+  color: var(--red);
+  text-decoration: none;
+}
+
+/* Form Section - Input */
+.form-control {
+  border: 0.5px solid var(--grayish-blue);
+  line-height: 1.5rem;
+  color: var(--dark-blue);
+  margin: 2% 2%;
+  width: 90%;
+  padding: 2% 4%;
+  border-radius: var(--border-angle);
+}
+
+.form-control::placeholder {
+  color: var(--dark-blue);
+}
+
+.terms-and-services:hover {
+  text-shadow: 0px 1px 1px var(--text-shadow);
+}
+
+/* Form Section - Btn Components */
+.btn-row {
+  padding-top: 2%;
+}
+
+.info-button {
+  background-color: var(--blue);
+  color: var(--white);
+  line-height: var(--btn-height);
+  font-size: var(--fontSize);
+  width: 100%;
+  display: block;
+  box-shadow: 0px 5px 8px var(--btn-shadow);
+  border-radius: var(--border-angle);
+  border-color: var(--blue);
+
+}
+
+.claim-button {
+  background-color: var(--green);
+  color: var(--white);
+  box-shadow: 0px 5px 5px var(--btn-shadow);
+  line-height: var(--btn-height);
+  font-size: var(--fontSize);
+  display: block;
+  width: 98%;
+  border-radius: var(--border-angle);
+  border-color: var(--green);
+  margin: 0 0 0 2%;
+}
+
+
+.info-button:hover, .info-button:focus {
+  color: var(--white);
+  opacity: var(--btn-opacity);
+}
+
+
+.claim-button:hover, .claim-button:focus {
+  color: var(--white);
+  opacity: var(--btn-opacity);
+}
+
+.claim-notification-text {
+  color: var(--grayish-blue);
+  font-size: 12px;
+  padding: 2% 0;
+  margin-top: 2%;
+}
+
+/* Form Section - Input - Error states*/
+.form-control-error {
+  background-image: url('images/icon-error.svg');
+  background-position: right 3% center;
+  background-repeat: no-repeat;
+  border: 1.5px solid var(--red);
+  border-radius: var(--border-angle);
+  line-height: 1.5rem;
+  color: var(--dark-blue);
+  margin: 2% 2%;
+  width: 90%;
+  padding: 2% 4%;
+}
+
+.row .error-msg {
+  font-style: italic;
+  text-align: right;
+  visibility: visible;
+  padding: 0% 0 3% 0;
+  font-size: 75%;
+}
+
+/*  Media Queries*/
+@media (max-width: 900px) {
+  .App {
+    background-image: url('images/bg-intro-mobile.png');
+    background-color: var(--red);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* PageContent Section */
+  #pagecontent-section {
+    padding: 20% 0 0 0;
+    text-align: center;
+  }
+
+  .registration-content.container {
+    text-align: center;
+    padding: 0 0;
+  }
+
+  .title-heading {
+    font-size: 24px;
+    padding: 0 5%;
+    font-weight: var(--bold);
+  }
+
+  .title-content {
+    font-weight: var(--regular);
+    font-size: 90%;
+    line-height: 1.5;
+    padding: 3% 8% 5% 8%;
+  }
+
+  /*  Form Section*/
+  #form-section {
+    padding-right: 0%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .registration-form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    line-height: 1.8;
+    padding: 2% 25%;
+    font-size: 85%;
+  }
+
+  .info-button {
+    width: 100%;
+  }
+
+  .claim-button {
+    padding: 2% 20%;
+    margin-left: 1%;
+  }
+}
